@@ -6,3 +6,8 @@ DeskApp - Bootstrap Admin Dashboard HTML Template
 <p align="center">
   <img src="src/images/screenshot.png">
 </p>
+
+### Mobile Version
+<p align="center">
+  <img src="src/images/mob-ver.jpg">
+</p>
