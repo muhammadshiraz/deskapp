@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+</head>
+<body>
+	<div class="pre-loader">
+		<div class="pre-loader-box">
+			<div class="loader-logo"><img src="vendors/images/deskapp-logo.png" alt=""></div>
+			<div class='loader-progress' id="progress_div">
+				<div class='bar' id='bar1'></div>
+			</div>
+			<div class='percent' id='percent1'>0%</div>
+			<div class="loading-text">
+				Loading...
+			</div>
+		</div>
+	</div>
+
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon dw dw-menu"></div>
+		</div>
+	</div>
+	<!-- tabs -->
+	<div class="tabbable tabs-left">
+		<div class="left-side-bar">
+			<div class="brand-logo">
+				<a href="index.html">
+					<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
+					<img src="vendors/images/deskapp-logo-icon.svg" alt="" class="light-logo">
+				</a>
+			</div>
+			<div class="menu-block customscroll">
+				<div class="sidebar-menu">
+					<ul class="nav nav-tabs" id="accordion-menu">
+						<li class="active">
+							<a href="#dashboard" data-toggle="tab"><img src="vendors/images/agenda-vector.svg" alt="Agenda Vector" id="agenda-vector" class="agenda-vector"></a>
+						</li>
+						<li>							
+							<a href="#shared" data-toggle="tab"><img src="vendors/images/note-vector.svg" alt="Note Vector" id="note-vector" class="note-vector op0-5"></a>							
+						</li>						
+					</ul>					
+					<div class="user-icon">
+						<img src="vendors/images/profile-photo.svg" alt="Profile Photo" id="profile-photo" class="profile-pic">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-overlay"></div>
+		<div class="main-container">
+			<div class="tab-content">
+				<div class="tab-pane active" id="dashboard">
+					<div class="xs-pd-20-10 pl-20">
+						<div class="title pb-20">
+							<h1 class="h1 mb-0">Dashboard</h1>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<a href="#" id="agenda-card-box" class="card-box mb-20 d-block mx-auto text-secondary">
+									<div id="agenda-card-header" class="card-header pb-30">
+										<h2 class="h2 mb-0"><img src="vendors/images/agenda-vector.svg" alt="Agenda Vector" id="card-agenda-vector" class="card-agenda-vector">Agenda<button type="button" class="help-btn" data-toggle="tooltip" data-placement="top" title="Help me understand"><img src="vendors/images/help-vector.svg" alt="Help Vector" id="help-vector" class="agenda-vector"></button><i class="icon-copy ion-chevron-up"></i></h2>										
+									</div>
+									<div id="agenda-content" class="content">
+										<label class="checkbox-container">Task 1
+											<input type="checkbox">
+											<span class="checkmark"></span>
+										</label>
+										<label class="checkbox-container">Task 2
+											<input type="checkbox">
+											<span class="checkmark"></span>
+										</label>
+										<label class="checkbox-container">Task 3
+											<input type="checkbox">
+											<span class="checkmark"></span>
+										</label>
+										<div class="addBtn-container"><button type="button" id="plus-btn" class="plus-btn"><img src="vendors/images/plus-vector.svg" alt="Plus Vector" id="plus-vector" class="plus-vector">Add Checkbox</button></div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3">
+								<a href="#" class="card-box mb-20 d-block mx-auto text-secondary">
+									<div class="card-header pb-30">
+										<h2 class="h2 mb-0"><img src="vendors/images/per-vector.svg" alt="Personal Vector" id="card-personal-vector" class="card-personal-vector">Personal Notes</h2>
+									</div>
+									<div class="content">
+										<div id="instructions-box">
+											<div class="text_box">
+												<p>Instructions:</p>
+												<p>This is an input text field you need to create, make sure that the area for text is with correct padding. Limit text to 500 characters. </p>
+												<p>This text must be stored in a Firebase realtime database.</p>
+											</div>
+											<label class="char-val">Max 500 characters</label>
+										</div>
+										<div class="addBtn-container"><button type="button" id="plus-btn" class="plus-btn"><img src="vendors/images/plus-vector.svg" alt="Plus Vector" id="plus-vector" class="plus-vector">Check Hover State</button></div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3">
+								<a href="#" class="card-box mb-20 d-block mx-auto text-secondary">
+									<div class="card-header pb-30">
+										<h2 class="h2 mb-0"><img src="vendors/images/location-vector.svg" alt="Location Vector" id="card-location-vector" class="card-location-vector">Your Location</h2>
+									</div>
+									<div class="content">
+										<div id="location-box">
+											<p>Country: <span id="country"></span></p>
+											<p>Continent: <span id="continent"></span></p>										
+										</div>										
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="shared">
+					<div class="xs-pd-20-10 pl-20">
+						<div class="title pb-20">
+							<h1 class="h1 mb-0">Shared Notes</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- js -->
+	<script src="vendors/scripts/core.js"></script>
+	<script src="vendors/scripts/script.js"></script>
+	<script src="vendors/scripts/process.js"></script>
+</body>
+</html>
