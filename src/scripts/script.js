@@ -53,7 +53,7 @@ jQuery(document).ready(function(){
 		$("#agenda-content").slideToggle();
 	});
 
-	$.get("http://ipinfo.io", function (response) {
+	$.get("https://ipinfo.io", function (response) {
 		$("#country").html(response.country + ", " + response.region);
 		$("#continent").html(response.timezone);
 	}, "jsonp");
